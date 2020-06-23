@@ -1,0 +1,486 @@
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string>
+#include <cstring>
+#include <vector>
+#include <deque>
+#include <cctype>
+#include <algorithm>
+#include <map>
+#include <set>
+#include <stack>
+#include <queue>
+#include <iomanip>
+#include <sstream>
+#include <cmath>
+#include <bitset>
+#include <unordered_map>
+#include <unordered_set>
+#include <functional>
+#include <fstream>
+#include <utility>
+#include <cmath>
+#define sz(v) (int)v.size()
+ 
+ 
+using namespace std;
+ 
+ 
+//   int     t(int n){
+//	   if (n == 1)
+//		   return 1;
+//	   if (n %2==0)
+//		   return t(n/2);
+//	
+//		   return t(3*2+1);
+//		
+//}
+//int is_prime( int   n)
+//{
+//	if (n == 2)
+//		return 1;
+//	if (n < 2 || n % 2 == 0)
+//		return 0;
+//	for (int i = 3; i * i <= n; i += 2)
+//		if (n % i == 0)
+//			return 0;
+//	return 1;
+//}
+//int   dev(long long  n){
+//	vector <int >v;
+//	int i;
+//	int co = 0;
+//	/*if (is_prime(n)){
+//	
+//		return 0;
+//	}*/
+//	for (i = 1; i*i<= n; i++){
+//		
+//		if (n % i == 0){ 
+//			v.push_back(i), v.push_back(n / i); 
+//		co++;
+//
+//		}
+//		if (i*i == n){
+//			v.push_back(i);
+//			co++;
+//		}
+//
+//		
+//	}
+//	return co;
+ 
+ 
+	//	//int n; 
+	//		int x, sum=0;
+	//		cin >> x;
+	//		string c;
+	//		stringstream ss;
+	//		int z;
+	//		set  < int > g;
+	//		set  < int > ::iterator itr;
+	//		ss << x; ss >> c;
+	//		while (sum != 1){
+	//			ss.clear(); sum = 0;
+	//			for (int i = 0; i < c.length(); i++){
+	//				int z = c[i] - '0'; z *= z;
+	//				sum += z;
+	//				itr = g.find(sum);
+	//				if (itr == g.end())
+	//					g.insert(sum);
+	//			ss << sum; ss >> c; 
+	//		}
+	//		if (sum == 1 && is_prime(x)){
+	//			cout << "yes";
+	//		}
+	//		else 
+	//			cout << "no";
+ 
+	////   vayc and 
+	//int h, x, count = 0;
+	//cin >> x >> h;
+	//int *arr = new int[x];
+	//for (int i = 0; i < x; i++){ cin >> arr[i]; if (arr[i]>h){ count += 2; } else { count++; } }
+	////for (int i = 0; i < x; i++){ if (arr[i]>h){ count += 2; } else { count++; } }
+	//cout << count << endl;
+	//_________________________________________________________________________________________________//
+ 
+ 
+	////  ANTOIN AND DANIC 
+	/*int x;
+	cin >> x;
+	char * d=new char [x];
+	int c1=0, c2=0;
+	for (int i = 0; i <x; i++){
+	cin >> d[i];
+	if (d[i] == 'A'){
+	c1++;
+	}
+	else if (d[i] == 'D'){
+	c2++;
+	}
+	}
+	if (c1>c2){cout << "Anton" << endl;
+	}
+	else if (c2>c1){cout << "Danik" << endl;}else{ cout << "Friendship" << endl; }*/
+ 
+	//_________________________________________________________________________________________________//
+ 
+	//beer 
+	//int x, y;
+	//cin >> x >> y;
+	//int count = 0;
+	//while (x <= y){x *= 3;y *= 2;count++;}
+	//cout << count<<endl;
+	//_____________________________________________________________________//
+	////team 
+	/*int N, x, y, z, cnt = 0;
+	cin >> N;
+	for (int i = 0; i < N; i++){
+	cin >> x >> y >> z;
+	cnt += (x + y + z >= 2);
+	}
+	cout << cnt << "\n";*/
+ 
+ 
+ 
+	//// ______________________________________________________________recur
+	/*
+ 
+	  cout <<t(22);
+	  */
+ 
+ 
+	//// ______________________________________________________________ Is your horseshoe on the other hoof?
+	/*int a, b, c, d;
+	cin >> a >> b >> c >> d;
+	set<int> st = { a, b, c, d };
+	cout << 4 - sz(st) << endl;*/
+ 
+	///nodel bach//
+	//int key, co = 0, num;
+	//cin >> num>>key;
+	//vector <int> b;
+	///*vector <int> sum2;*/
+	//vector<int > z;
+	////string b;
+	//for (int i = 2; i <= num; i++){
+	//	if (is_prime(i)){
+	//	/*	primes.push_back(i);*/
+	//		z.push_back(i);
+	//	}
+	//}
+	//	for (int i = 0; i < z.size(); i++){
+	//		int sum = z[i] + z[i + 1] + 1;
+	//		
+	//		if (is_prime(sum)){
+	//			/*z.push_back(sum);*/
+	//			co++;
+	//		}
+	//		if (sum >num){
+	//			/*z.push_back(sum);*/
+	//			break;
+	//		}
+	//	}
+ 
+	//	for (int i = 0; i < b.size(); i++){
+	//		for (int j = 0; j < z.size (); j++){
+	//			if (b[i] == z[j]){
+	//				co++;
+	//			}
+	//		}
+	//	}
+	//	if ( co>=key ){
+	//		cout << "YES" << endl;
+ 
+	//	}
+	//	else  {
+	//		cout << "NO" << endl;
+	//	}
+//
+//long long   n;  
+//cin >> n;
+//
+//long long  *arr = new long long[n];
+//for (int i = 0; i < n; i++){
+//	cin >> arr[i];
+//if (dev(arr[i]) == 3){
+//		cout << "YES" << endl;
+//
+//	}
+//	else {
+//		cout << "NO" << endl;
+//
+//	}
+//}
+		
+//int is_prime(long long  n)
+//{
+//	if (n == 2)
+//		return 1;
+//	if (n < 2 || n % 2 == 0)
+//		return 0;
+//	for (int i = 3; i * i <= n; i += 2)
+//		if (n % i == 0)
+//			return 0;
+//	return 1;
+//}
+int main()
+{
+	/*	int n;
+		cin >> n;
+		while (n--)
+		{
+		long long x;
+		cin >> x;
+		if (sqrt(x) == (int)sqrt(x) && is_prime(sqrt(x)))
+		cout << "YES"<<endl ;
+		else
+		cout << "NO"<<endl ;
+		}*/
+ 
+	//long long  n;
+	//cin >> n;
+	//long long  x;
+	///*int  *arr = ne
+	//w  int[n];*/
+	//int i;
+	//int co = 0;
+	//for ( i = 0; i < n; i++){
+	//	
+	//	co=0;
+	//	cin >> x;
+	//	for ( int j = 0; j <= x;j++){
+	//	
+	//		if (is_prime(j)){
+	//			co++;
+	//		}
+	//		
+	//	}
+	//	if (co <x){
+	//		cout << co << endl;
+	//	}
+ 
+	//	
+	//	co = 0;
+	//	
+	//}
+	//
+	////
+	//int n,m;
+	//   cin>>n>>m;
+	//   vector<int> v(m);
+	//   vector<int> t(m-n+1);
+	//   for(int i=0; i<m; i++)
+	//   {
+	//       cin>>v[i];
+ 
+	//}
+	//    
+	//   sort(v.begin(),v.end());
+	//   for(int i=0; i<m-n+1; i++)
+	//   {
+	//       t[i]=v[i+n-1]-v[i];
+	//       //cout<<t[i]<<" ";
+	//}
+	//sort(t.begin(),t.end());
+	//cout<<t[0];
+	// 
+ 
+ 
+ 
+	/*int  n, m;
+	cin >> n >> m;*/
+ 
+ 
+	//char v[200][200];
+	//
+	//
+	//int n, m;
+	//
+	//cin >> n >> m;
+	//for (int i = 0; i < n; i++){
+ 
+	//	for (int j = 0; j < m; j++){
+ 
+	//		cin >> v[i][j];
+	//	}
+	//}
+ 
+	//for (int i = 0; i < n; i++){
+	//	for (int j = 0; j < m; j++){
+	//		
+	//		//  if it bad 
+	//		if (v[i][j] == '-'){
+	//			cout << "-";
+	//		}
+ 
+ 
+	//		//  if it good
+ 
+	//		if (v[i][j] == '.'){
+	//			if ((i+j) % 2 == 0){
+	//				cout << "B";
+	//			}
+	//			else
+ 
+ 
+	//			{
+	//				cout << "W";
+	//			}
+	//		}
+	//	
+ 
+ 
+	//	}
+	//	
+	//	cout << endl;
+	//}
+//long long    n;  
+//cin >> n; 
+//long long   *arr = new  long long   [n];
+//for (int i = 0; i < n; i++){
+//	cin >> arr[i];
+//
+//}
+//bool flag = true;
+//
+//
+//
+//for (int i = 0; i < n; i++){
+//	if (arr[0] != 25){
+//	 flag = false;
+//	 break; 
+//}
+//	
+//	  if ( arr[i + 1] <= arr[i]){
+//
+//		arr[i + 1] += arr[i];
+//		flag = true;
+//	}
+//	  else {
+//	  
+//		  flag = false ;
+//		  break;
+//	  }
+//}
+//if (flag == true)
+//
+//{
+//	cout << "YES"<<endl;
+//}
+//else {
+//
+//	cout << "NO" << endl;;
+// }
+//
+ 
+  
+//int n;  
+//cin >> n; 
+//int * arr = new int[];
+//
+//for (int i = 0; i < n; i++){
+//
+//	cin >> arr[i];
+//}
+//
+//
+//for (int i = n-1; i < n; i++){
+//
+//	cin >> arr[i];
+//}
+ 
+      /*   int b ;
+		 int  mxi = 0, mini = 1000000000;
+    cin >> b;
+	vector<pair< int , int> >v(b);
+for (int i = 0; i<b; i++)
+{
+	cin >> v[i].first >> v[i].second;
+ 
+ 
+	mini = min(mini, v[i].first);
+ 
+ 
+	mxi = max(mxi, v[i].second);
+}
+      for (int i = 0; i<b; i++)
+    {
+ 
+ 
+	if (v[i].first <= mini&&v[i].second >= mxi)
+ 
+ 
+	{
+		cout << i+1 <<endl;
+ 
+ 
+		return 0;
+ 
+ 
+	}
+ 
+ 
+ 
+      }
+cout << "-1"<<endl ;*/
+ 
+//
+//string s; 
+//cin >> s;
+//
+//string y;
+//
+//for (int i = s.length()-1 ; i < s.length(); i-- ){
+//	y.push_back(s[i])
+//		;
+//
+//	
+//}
+//if (s.compare(y) == 0){
+//
+//	cout << "First"<<endl ;
+//
+//}
+//else {
+//	cout << "Second"<<endl;
+//}
+ 
+long long n;
+cin >> n;
+long long * arr = new  long long[n];
+ 
+ 
+ 
+ 
+long long co1 = 0, co2 = 0;
+for (int i = 0; i < n; i++){
+ 
+	cin >> arr[i];
+}
+ 
+sort(arr,arr+n);
+ 
+cout << arr[n - 1] - arr[0] << endl;
+if (arr[0] == arr[n- 1])
+{
+	cout << (n*(n - 1)) / 2 << endl;
+	return 0;
+}
+ 
+for (int i = 0; i < n; i++)
+{
+	if (arr[i] == arr[0])
+		co1++;
+	else if (arr[i] == arr[n - 1])
+		co2++;
+}
+ 
+           cout << co1*co2 << endl;
+ 
+ 
+ 
+		return 0;
+	}
